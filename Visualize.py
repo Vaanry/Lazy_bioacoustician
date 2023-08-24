@@ -8,8 +8,8 @@ def visualize(home):
     os.chdir(home)
     img = home+'\\'+'img' # записываем имя для папки с картинками и следом создаём её
     
-    if img not in os.listdir(home):
-        os.mkdir(img)
+    if 'img' not in os.listdir(home):
+        os.mkdir('img')
         
     sound_files = [i for i in os.listdir(home) if 'wav' in i]   
     # Ищем файлы wav в директории.

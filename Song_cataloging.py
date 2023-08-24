@@ -12,16 +12,14 @@ def repertoire(home, img):
     (при наличии этих файлов в рабочей директории)'''
 
     catalog_sound = home+'\\'+'catalog_sound' 
-    if catalog_sound not in os.listdir(home):
-        os.mkdir(catalog_sound)
+    if 'catalog_sound' not in os.listdir(home):
+        os.mkdir('catalog_sound')
 
     catalog_img = home+'\\'+'catalog_img' # Директория, куда будут сохранены картинки каталога
     
-    if catalog_img not in os.listdir(home):
-        os.mkdir(catalog_img)
+    if 'catalog_img' not in os.listdir(home):
+        os.mkdir('catalog_img')
         
-    os.mkdir(catalog_img)
-
     os.chdir(img) # Меняем рабочую директорию на ту, где лежат искомые картинки
     
     # Основной рабочий скрипт, классифицирующий картинки
